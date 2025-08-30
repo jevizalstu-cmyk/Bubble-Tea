@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- This is the head-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Business</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+
+<style>
+
+    /* This is where our background picture is */
+ body::before {
+  content: "";
+  background-image: url('7c0613d5-b3ed-40e9-8534-bebe8b5fa4c5.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1; /* Adjust for more/less visibility */
+  z-index: -1; /* Puts it behind everything */
+  pointer-events: none; /* Makes sure it's not clickable */
+}
+
+
+
+ /* This is the Character gallery container */
+    .container {
+      display: flex;
+      gap: 10px;
+      width: 90%;
+      max-width: 1100px;
+      height: 400px;
+      margin: 2rem auto;
+    }
+
+
+
+
+
+    /* This is where the characters are at */
+    .img {
+      position: relative;
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.7) saturate(0.2) contrast(1) blur(2px);
+      border-radius: 20px;
+      transition: flex 0.3s, filter 0.3s;
+      overflow: hidden;
+      box-shadow: rgba(0, 0, 0, 0.493) 0px 25px 50px -12px;
+      border: 1px solid #8b9da9;
+    }
+
+
+    /* This will flex the characters like an animation or something but just flex yeahhhhhh */
+    .img:hover {
+      flex: 1.5;
+      filter: none;
+    }
+
+
+    /* This is the styling of the names of the Milk Tea where it transforms when the button is clicked */
+    .img span {
+      display: block;
+      width: 90%;
+      padding: 0.5rem;
+      font-size: clamp(0.75rem, 2.5vw, 1.25rem);
+      text-align: center;
+      color: #ffffff;
+      letter-spacing: 1px;
+      font-weight: bold;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.2s ease;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+      word-break: break-word;
+    }
+
+
+    /* If this code is removed then so the Milk Tea names so dont u dare okeh?*/
+    .img:hover span {
+      bottom: 20px;
+    }
+
+
+    /* These are the 4 first characters from Milk Tea is shown*/
+    .img1 { background-image: url("Chocolate-Bubble-Tea-Recipe-SugarYums-9-1-1152x1536.webp"); }
+    .img2 { background-image: url("IDB-milk-tea-Featured-Image.png"); }
+    .img3 { background-image: url("Strawberry-Milk-Tea-Takestwoeggs-Final-PHotography-3.jpg"); }
+    .img4 { background-image: url("matcha-milk-tea-3-1025x1536.jpg"); }
+
+
+
+
+</style>
+
+
+<!--This is the body-->
+<body class="bg-gray-900 text-indigo-400">
+
+<!-- Navbar -->
+<header class="bg-transparent p-1 rounded-lg shadow hover:shadow-lg">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-2">
+
+    <!-- Logo and Title -->
+    <div class="flex items-center space-x-3">
+      <img src="bubble-tea-neon-signs-style-600nw-2139828651.webp" alt="Bubble Tea Logo" class="h-16 w-16 object-cover rounded-full">
+      <h1 class="text-3xl font-bold text-blue-600">Bubble Tea</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex space-x-6">
+      <a href="#services" class="text-white hover:text-gray-400">Services</a>
+      <a href="#about" class="text-white hover:text-blue-400">Menu</a>
+      <a href="#contact" class="text-white hover:text-blue-400">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<!-- Hero -->
+<section class="text-center bg-transparent p-5 rounded-lg shadow hover:shadow-lg text-white">
+  <h2 class="text-4xl font-bold mb-4">We Serve Refreshing Bubble Tea made with Love~</h2>
+  <p class="mb-6 text-lg sm:text-xl font-semibold text-indigo-300">We provide unique beverages to meet our customers' preferences.</p>
+  <button id="learnBtn" class="bg-white text-blue-600 px-6 py-2 rounded-lg
+font-semibold hover:bg-gray-200">
+ Learn More
+</button>
+</section>
+
+
+
+
+
+<!-- Services -->
+<section id="services" class="max-w-6xl mx-auto py-16 px-6">
+<h3 class="text-3xl font-bold text-center mb-10 bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg font-semibold text-indigo-300 mb-2">Our Services Offers</h3>
+
+<div class="grid md:grid-cols-3 gap-6">
+<article class="bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg">
+<h4 class="text-lg sm:text-xl font-semibold text-indigo-300 mb-2">Customized Drinks</h4>
+<p class="text-gray-300 text-sm">Every cup is a masterpiece! Vibrant layers, colorful toppings, and creative designs make our bubble tea perfect for Instagram, TikTok, and your aesthetic feed. Snap, sip, and share the beauty in every drink.</p>
+</article>
+<article class="bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg">
+<h4 class="text-lg sm:text-xl font-semibold text-indigo-300 mb-2">Bubble Tea Catering</h4>
+<p class="text-gray-300 text-sm">
+Offering bubble tea catering is a fantastic way to grow your business beyond your storefront! It’s perfect for events and builds strong brand visibility.</p>
+</article>
+<article class="bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg">
+<h4 class="text-lg sm:text-xl font-semibold text-indigo-300 mb-2">Advantages of Milk Tea as a Product</h4>
+<p class="text-gray-300 text-sm">
+    ✔️ Highly customizable (flavor, sugar, toppings).
+    <p class="text-gray-300 text-sm">
+        ✔️ High profit margin (ingredients are inexpensive, but customers pay for the brand & experience).
+
+        <p class="text-gray-300 text-sm">
+            ✔️ Trendy & social (Instagrammable drinks, group hangouts).
+
+            <p class="text-gray-300 text-sm">
+                ✔️ Flexible menu (can add smoothies, fruit teas, coffee).
+
+            </p>
+        </p>
+    </p>
+
+</p>
+</article>
+</div>
+
+
+</section>
+
+
+
+    <!-- This is the Bubble Tea Picture -->
+    <section class="max-w-7xl mx-auto px-4 py-4 ">
+      <img src="bubble-milk-tea-design-collection-pearl-milk-tea-boba-milk-tea-yummy-drinks-coffees-with-doodle-style-banner-illustration-vector.jpg" alt="Bubble" class="w-full h-auto rounded-lg shadow-lg object-cover">
+    </section>
+<!--OIP.jpeg-->
+
+
+
+<!-- Contact -->
+<section id="contact" class="bg-gray-900 py-16 ">
+<div class="max-w-3xl mx-auto text-center px-6 bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg">
+<h3 class="text-3xl font-bold mb-6 ">Contact Us</h3>
+<form id="contactForm" class="bg-gray-800 p-5 rounded-lg shadow hover:shadow-lg">
+<input type="text" id="name" placeholder="Your Name" class="w-full p-3
+mb-4 border rounded-lg " />
+<input type="email" id="email" placeholder="Your Email" class="w-full
+p-3 mb-4 border rounded-lg" />
+<textarea id="message" placeholder="Your Message"
+class="w-full p-3 mb-4 border rounded-lg"></textarea>
+<button type="submit"
+class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send
+Message</button>
+<p id="formMsg" class="mt-4 text-green-600 hidden"> Message Sent!</p>
+</form>
+</div>
+</section>
+
+
+
+      <!-- Character Showcase Section -->
+      <section class="col-span-full" id="characterShowcase">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-indigo-300 mb-4 text-center">Flavors</h2>
+
+          <nav class="container mx-auto flex justify-between items-center">
+            <div class="container">
+              <div class="img img1"><span>Choco</span></div>
+              <div class="img img2"><span>Mocha</span></div>
+              <div class="img img3"><span>Strawberry</span></div>
+              <div class="img img4"><span>Matcha</span></div>
+            </div>
+          </nav>
+      </section>
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-gray-950 text-gray-400 text-center text-sm py-4 mt-4">
+<p>&copy; 2025 MyBusiness. All rights reserved.</p>
+</footer>
+
+
+
+
+
+
+<!-- JavaScript -->
+
+<script>
+// 1) Hero button alert
+4
+document.getElementById('learnBtn').addEventListener('click', function () {
+alert('Thanks for your interest! Scroll down to see our services.');
+});
+
+
+// 2) Simple contact form validation + success
+document.getElementById('contactForm').addEventListener('submit', function
+(e) {
+e.preventDefault();
+const name = document.getElementById('Name').value.trim();
+
+const email = document.getElementById('Email').value.trim();
+const message = document.getElementById('Message').value.trim();
+if (!name || !email || !message) {
+alert(' Please fill out all fields before submitting.');
+return;
+}
+
+// Very basic email check (optional)
+const emailOk = /.+@.+\..+/.test(email);
+if (!emailOk) {
+alert('Please enter a valid email address.');
+return;
+}
+document.getElementById('formMsg').classList.remove('hidden');
+// Clear fields (optional)
+// document.getElementById('contactForm').reset();
+});
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
